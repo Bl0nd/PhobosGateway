@@ -1,0 +1,682 @@
+/*#region globais seletores*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('../font/Poppins-Light.otf');
+}
+
+/*unidades relativas*/
+/*rem*/
+html {
+    font-size: 28px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*em*/
+body {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+html, body, textarea {
+    font-family: 'Poppins';
+}
+
+
+h1 {
+    font-size: 6.4em;
+    padding: .5em 0;
+}
+
+h2 {
+    font-size: 5.2em;
+}
+
+h3 {
+    font-size: 4em;
+}
+
+h4 {
+    font-size: 2.8em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+a {
+    font-size: 1.2em;
+    transition: .3s;
+    text-transform: capitalize;
+    color: white;
+}
+
+/*btnDefault*/
+.btnDefault {
+    background-color: rgba(0, 0, 255, .5);
+    font-size: 1.2em;
+    padding: 1.2em 2.5em;
+    color: white;
+    margin: 2.5em auto;
+    border: none;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+    .btnDefault:hover {
+        background-color: rgba(30, 144, 155, .5);
+        transition: .3s;
+        cursor: pointer;
+    }
+
+/*classes*/
+.container {
+    width: 100%;
+    height: auto;
+    /* background: black; */
+}
+
+/*#endregion globais seletores*/
+
+/*#region header*/
+/*menu-hamburger*/
+.btnMenu {
+    font-size: 50px;
+    padding: 10px;
+    color: white;
+    transition: .3s;
+    display: none;
+}
+
+    .btnMenu:hover i {
+        color: #00FF00;
+        transition: .3s;
+    }
+
+.menu {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    width: 10%;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+    .logo i {
+        font-size: 60px;
+    }
+
+    .logo span {
+        font-size: 1.5em;
+        padding-left: 20px;
+        font-weight: 800;
+    }
+
+/* navbar */
+.navbar {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+    .navbar li {
+        padding: 0 5px;
+    }
+
+    .navbar button {
+        padding: 10px 25px;
+        border: none;
+        margin-left: 10px;
+        background-color: #9932CC;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+        .navbar button:hover {
+            background-color: #00FF00;
+            transition: .3s;
+        }
+
+    .navbar li a {
+        height: 70px;
+        line-height: 70px;
+        padding: 20px 25px;
+    }
+
+        .navbar li a:hover:not(.sub a:hover) {
+            background-color: rgba(30, 144, 255, .5);
+        }
+
+.sub li:hover {
+    background-color: rgba(30, 144, 255, .5);
+}
+
+ul.sub {
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0;
+    text-align: center;
+}
+
+
+/*#endregion header*/
+
+/*#region home*/
+.homeC {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+.homeI {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+    .homeI h1 {
+        font-size: 6em;
+        color: white;
+    }
+
+    .homeI h2 {
+        font-size: 4em;
+        color: white;
+    }
+
+/*#endregion home*/
+
+/*#region about*/
+#about {
+    background-image: url('../img/img3.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8.5em 0;
+}
+
+.aboutC {
+    width: 90%;
+    color: white;
+    text-align: center;
+}
+
+.card {
+    margin-top: 4em;
+}
+
+.cardTitulo {
+    height: 120px;
+    line-height: 120px;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.card li {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+    .card li img {
+        width: 20vh;
+        height: 20vh;
+        border-radius: 50%;
+        margin: 2.5em 0;
+        border: 3px solid white;
+    }
+
+.cardStars {
+    color: white;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: 2em;
+    height: 100px;
+    line-height: 100px;
+}
+
+.cardCargo {
+    color: white;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: .8em;
+    height: 50px;
+    line-height: 50px;
+}
+
+.socialMedia {
+    color: white;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: 2em;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 50px;
+    transition: .3s;
+}
+
+    .socialMedia i:hover {
+        color:#00FF00;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+/*#endregion about*/
+
+/*#region emphasis*/
+.carousel {
+    width: 100%;
+    background-color: #03020b;
+}
+
+.carouselInner {
+    width: 100%;
+    background-color: #03020b;
+    margin: 0 auto;
+}
+
+.imgFit {
+    width: 100%;
+    height: 100%;
+}
+
+/*#endregion emphasis*/
+
+/*#region products*/
+#products {
+    background-image: url('../img/img6.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8.5em 0;
+    text-align: center;
+    color: white;
+}
+
+    #products h4 {
+        margin-bottom: 1.5em;
+    }
+
+.productsC {
+    /* background-color: red; */
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardProd {
+    width: 20%;
+    text-align: center;
+    color: white;
+    margin: 2em .5em;
+}
+
+    .cardProd li {
+        height: 60px;
+        line-height: 60px;
+        background-color: white;
+        color: black;
+    }
+
+        .cardProd li:last-child {
+            height: 150px;
+            line-height: 150px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .cardProd li.price {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: white;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: rgb(0, 94, 255);
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: -50px;
+        }
+
+        .cardProd li.title {
+            color: white;
+            height: 130px;
+            line-height: 130px;
+            border-radius: 10px 10px 0 0;
+            background-color: #03020b;
+            font-size: 2em;
+            text-transform: capitalize;
+            padding-top: .8em;
+        }
+
+.recomended li:not(:first-child) {
+    color: white;
+    background-color: black !important;
+}
+
+/*#endregion products*/
+
+/*#region services*/
+#services {
+    background-color: #03020b;
+    color: white;
+    text-transform: capitalize;
+}
+
+.servicesC {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 5em 0;
+}
+
+.servicesI {
+    width: 60%;
+    margin: 0 auto;
+}
+
+    .servicesI table {
+        width: 100%;
+        margin: 6em auto;
+    }
+
+        .servicesI table th {
+            font-size: 1.8em;
+            font-weight: 900;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        .servicesI table td {
+            font-size: 1.5em;
+            height: 2.5em;
+            line-height: 2.5em;
+        }
+
+            .servicesI table td a {
+                height: 2.5em;
+                line-height: 2.5em;
+                padding: 5px 15px !important;
+            }
+
+
+/*
+/* linhas pares (even) */
+/* .tabela tbody tr:nth-child(even) {
+    background-color: #CCC;
+} */
+/* linhas ímpares (odd) */
+/* .tabela tbody tr:nth-child(odd) {
+    background-color: #FFF;
+} */
+
+
+/*#endregion services*/
+
+/*#region domain*/
+#domain {
+    background-image: url('../img/img2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 25em 0;
+    color: white;
+    text-align: center;
+}
+
+.domainC {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .domainC li {
+        height: 100px;
+        line-height: 100px;
+        margin-top: 2.5em;
+    }
+
+        .domainC li input[type=text] {
+            background-color: rgba(255, 255, 255, .8);
+            width: 80%;
+            padding: .8em;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+        }
+
+/*#endregion domain*/
+
+/*#region localization*/
+#localization {
+    background-image: url('../img/img2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 5em 0;
+    color: white;
+    text-align: center;
+}
+
+.localizationC {
+    width: 100%;
+    padding: 2em 0;
+}
+
+iframe {
+    filter: invert(100%);
+}
+
+/*#endregion localization*/
+
+/*#region contact*/
+#contact {
+    background-image: url('../img/img10.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8em 0;
+    color: white;
+    text-align: center;
+}
+
+.contactC {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contactI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+    .contactI li {
+        padding: 20px 10em;
+    }
+
+        .contactI li input[type=text],
+        .contactI li input[type=email],
+        .contactI li input[type=password],
+        .contactI li textarea {
+            background-color: #00FF00;
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            color: black;
+        }
+
+            .contactI li input[type=text]:focus,
+            .contactI li input[type=email]:focus,
+            .contactI li input[type=password]:focus,
+            .contactI li textarea:focus {
+                background-color: #9932CC;
+                outline: none;
+            }
+
+        .contactI li a {
+            text-decoration: underline;
+        }
+
+        .contactI li input[type=submit],
+        .contactI li input[type=reset] {
+            width: 30%;
+            margin: 5px;
+        }
+
+
+/*#endregion contact*/
+
+/*#region footer*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #03020b;
+    padding: 50px 0;
+}
+
+.footerC {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: .6;
+}
+
+    .footerC ul li {
+        height: 30px;
+        line-height: 30px;
+        opacity: .6;
+        transition: .3s;
+    }
+
+        .footerC ul li:hover {
+            opacity: 1;
+            transition: .3s;
+        }
+
+    .footerC h5 {
+        color: white;
+    }
+
+
+/*#endregion footer*/
+
+/*#region thanks.html*/
+.geral {
+    background-color: #03020b;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 30em 0;
+    position: fixed;
+}
+
+    .geral h4 {
+        padding: 2.5em 0;
+    }
+
+/*#endregion thanks.html*/
+
+/*#region login*/
+#login {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 5em 0;
+}
+
+    #login h4 {
+        padding: 2em 0;
+    }
+
+
+.cxTexto {
+    width: 100%;
+}
+
+/*#endregion login*/
+
+/*#region defaultUser*/
+
+/*#region defaultUser*/
+.base {
+    width: 100%;
+    min-height: 800px;
+    background-color: #1d1d1d;
+    padding: 70px;
+}
+
+    .base h1 {
+        font-size: 3em;
+        color: aliceblue;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .base table {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        color: aliceblue;
+        border-bottom: 1px solid aliceblue;
+    }
+
+        .base table th {
+            font-size: 1.5em;
+            padding: 10px 0;
+            border-bottom: 1px solid aliceblue;
+        }
+
+        .base table td {
+            height: 1.2em;
+            line-height: 1.2em;
+            padding: 10px;
+        }
+
+            .base table td:last-child {
+                padding-bottom: 50px;
+            }
+
+/*#endregion defaultUser*/
+
+
+/*#endregion defaultUser*/
